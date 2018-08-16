@@ -1,2 +1,2 @@
 # dynamicSmagorinsky
-F
+For OpenFOAM-6
