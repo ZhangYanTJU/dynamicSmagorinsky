@@ -73,6 +73,8 @@ class dynamicSmagorinsky
 
         autoPtr<LESfilter> filterPtr_;
         LESfilter& filter_;
+	
+	scalar Sct_;
 
 
     // Private Member Functions
