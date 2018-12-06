@@ -168,7 +168,8 @@ dynamicSmagorinsky<BasicTurbulenceModel>::dynamicSmagorinsky
     ),
 
     filterPtr_(LESfilter::New(this->mesh_, this->coeffDict())),
-    filter_(filterPtr_())
+    filter_(filterPtr_()),
+    Sct_(readScalar(this->coeffDict().lookup("Sct")))
 {
     //updateSubGridScaleFields(symm(fvc::grad(U)));
 
