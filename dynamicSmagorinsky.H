@@ -152,6 +152,13 @@ public:
         
         //- Correct Eddy-Viscosity and related properties
         virtual void correct();
+	
+        //- Return the effective dynamic viscosity
+        virtual tmp<volScalarField> muEff() const
+        {
+            Info<<"haha, Sct is controled by me!!!"<<endl;
+            return this->mut()/Sct_ + this->mu();
+        }
 };
 
 
